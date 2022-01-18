@@ -30,6 +30,52 @@ let party; //automatically 'any' type because not assigned anything
 party = 5; //fine
 party = 'pants'; //fine
 
+//------------------------------//
+//Creating own type from scratch
+//------------------------------//
+
+//pascal style first letter uppercase
+type Style = 'bold' | 'italic' | 23 ; //separated with pipe = "union type"
+
+//fine:
+let font: Style = "bold";
+
+let lasagna: Style = 23;
+
+//nope: 
+//         font = "beeeeeeans";
+
+//------------------------------//
+//objects - enforce shape with interface
+//------------------------------//
+
+interface Person { // enforce shape of objects and stuff with an interface
+    first: string;
+    last: string;
+    [key: string] : any; //key with type of string = val any - allows additional properties!
+}
+
+const dude : Person = {
+    first: 'jeff',
+    last: 'delaney'
+}
+
+const bro : Person = {
+    first: 'chris',
+    last: 'mochinski',
+    loud: true
+}
+
+
+//------------------------------//
+//objects - enforce shape with interface
+//------------------------------//
+
+
+
+
+
+
 const awesome = (incomingArray : string[] | number[] ) => { 
 
     let array = [incomingArray]

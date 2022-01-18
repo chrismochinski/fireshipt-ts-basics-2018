@@ -43,7 +43,9 @@ function hello() {
         });
     });
 }
+//------------------------------//
 //IMPLICITLY TYPED: DECLARED AS NUMBER ALLOWS TYPESCRIPT TO KNOW WHAT IT IS
+//------------------------------//
 //it is "automatically inferred"
 var lucky = 23;
 //implicitly typed - declared number allows it to be automatically inferred 
@@ -51,8 +53,30 @@ var lucky = 23;
 // can't do this - it's a number, not a string! NAUGHTY
 //but if you go:
 var unlucky = 13;
+//you can go:
 unlucky: 'pancakes';
 console.log('unlucky is now:', unlucky);
+//------------------------------//
+//EXPLICITLY TYPED: no variable type yet - don't know what we're gonna be!
+//------------------------------//
+var party; //automatically 'any' type because not assigned anything
+party = 5; //fine
+party = 'pants'; //fine
+//fine:
+var font = "bold";
+var lasagna = 23;
+var dude = {
+    first: 'jeff',
+    last: 'delaney'
+};
+var bro = {
+    first: 'chris',
+    last: 'mochinski',
+    loud: true
+};
+//------------------------------//
+//objects - enforce shape with interface
+//------------------------------//
 var awesome = function (incomingArray) {
     var array = [incomingArray];
     for (var i = 0; i < incomingArray.length; i++) {
